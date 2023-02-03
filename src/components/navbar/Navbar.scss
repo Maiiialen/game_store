@@ -1,0 +1,34 @@
+@import "../../styles/index.scss";
+
+.navbar {
+    background-color: $dark-blue;
+    color: white;
+    font-size: xx-large;
+    font-weight: 600;
+    height: $navbar-height;
+    width: calc(100vw - 80px);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .links {
+        display: flex;
+        gap: 60px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            border: solid 3px $dark-blue;
+            border-radius: 6px;
+            padding: 3px 6px;
+        }
+
+        a:hover {
+            color: $light-blue;
+            border: solid 3px $light-blue;
+            border-radius: 6px;
+            padding: 3px 6px;
+        }
+    }
+}
