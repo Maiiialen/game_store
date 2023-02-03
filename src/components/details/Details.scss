@@ -1,0 +1,75 @@
+@import "../../styles/index.scss";
+
+.details {
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) minmax(300px, 1fr);
+    height: calc(100vh - $navbar-height - 80px);
+    width: calc(100vw - 20vw);
+    padding: 40px 10vw;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+
+
+        img {
+            max-height: 50vh;
+            max-width: 40vw;
+        }
+    }
+
+    .buy {
+        background-color: $light-blue;
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-top: -20vh;
+        border: solid 6px $dark-blue;
+        border-radius: 12px;
+        padding: 20px;
+        gap: 40px;
+
+        .amount {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-self: center;
+            align-items: center;
+            gap: 10px;
+
+            .value {
+                justify-self: center;
+            }
+
+            img {
+                width: 20px;
+                padding: 10px;
+                background-color: white;
+                border: solid 2px $dark-blue;
+                border-radius: 12px;
+            }
+
+            img:hover {
+                cursor: pointer;
+            }
+
+            img.disabled:hover {
+                cursor: default;
+            }
+        }
+
+        button {
+            align-self: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: solid 4px $dark-blue;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+    }
+}
