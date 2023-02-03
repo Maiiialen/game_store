@@ -1,0 +1,9 @@
+@import "../../styles/index.scss";
+
+.storeGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 20px;
+    padding: 20px;
+}
