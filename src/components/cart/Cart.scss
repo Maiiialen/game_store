@@ -1,0 +1,21 @@
+@import "../../styles/index.scss";
+
+.cart-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5vh 0;
+
+    .cart {
+        width: max(500px, 50vw);
+        background-color: $light-blue;
+        border: solid 6px $dark-blue;
+        border-radius: 12px;
+        padding: 20px;
+
+        .name {
+            font-size: xx-large;
+            font-weight: 800;
+        }
+    }
+}
