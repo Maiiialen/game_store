@@ -1,10 +1,12 @@
 @import "../../styles/index.scss";
 
 .cart-page {
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 5vh 0;
+    margin-bottom: 5vh;
 
     .cart {
         width: max(500px, 50vw);
@@ -16,6 +18,25 @@
         .name {
             font-size: xx-large;
             font-weight: 800;
+        }
+
+        .list {
+            display: grid;
+            grid-template-columns: max(500px, 50vw);
+            grid-auto-rows: minmax(1fr, 300px);
+            gap: 10px;
+        }
+
+        .line {
+            border: solid 3px $dark-blue;
+            border-radius: 6px;
+            margin: 10px -15px;
+        }
+
+        .total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 }

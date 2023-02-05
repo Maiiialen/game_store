@@ -1,0 +1,59 @@
+@import "../../styles/index.scss";
+
+.listObjectBox {
+
+    .box {
+        background-color: $light-blue;
+        border: solid 4px $dark-blue;
+        border-radius: 8px;
+        display: flex;
+        padding: 10px;
+        gap: 20px;
+        color: black;
+        text-decoration: none;
+
+        .productImage {
+            max-height: 200px;
+        }
+
+        .detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .price {
+                align-self: flex-end;
+            }
+        }
+
+        .amount {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-self: center;
+            align-items: center;
+            gap: 10px;
+
+            .value {
+                justify-self: center;
+            }
+
+            img {
+                width: 20px;
+                padding: 10px;
+                background-color: white;
+                border: solid 2px $dark-blue;
+                border-radius: 12px;
+            }
+
+            img:hover {
+                cursor: pointer;
+            }
+
+            img.disabled:hover {
+                cursor: default;
+            }
+        }
+    }
+}

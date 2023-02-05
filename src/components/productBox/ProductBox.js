@@ -9,7 +9,7 @@ function ProductBox({ id, image, game }) {
             {image}
             <div className="detail">
                 <div>{game.name}</div>
-                <div className="price">{game.price} €</div>
+                <div className="price">€{game.price}</div>
             </div>
         </Link>
     );

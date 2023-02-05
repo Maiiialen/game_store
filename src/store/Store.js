@@ -8,7 +8,21 @@ function add(game, number, state) {
 }
 
 function remove(game, state) {
-    state.cart = state.cart.filter(function (element) { return element.game === game })
+    state.cart = state.cart.filter(function (element) { return element.game !== game })
+    console.log(state.cart)
+    return state
+}
+
+function increase(game, state) {
+    let index = state.cart.findIndex((product) => game === product.game)
+    state.cart[index].number += 1
+    console.log(state.cart)
+    return state
+}
+
+function decrease(game, state) {
+    let index = state.cart.findIndex((product) => game === product.game)
+    state.cart[index].number -= 1
     return state
 }
 
@@ -23,14 +37,9 @@ const useStore = create(devtools((set) => ({
     }],
     addToCart: (game, number) => set((state) => add(game, number, state)),
     removeFromCart: (game) => set((state) => remove(game, state)),
-        // increaseNumber: (game) => set((state) => () => {
-        //     console.log(Array.isArray(state.cart))
-        //     state.cart[state.cart.findIndex(element => element.game === game)].number += 1
-        //     console.log(state.cart)
-        //     return state.cart
-        // }),
-        // decreaseNumber: (game) => set((state) => ({ cart: state.cart[state.cart.findInxed((obj => obj.game === game))].number -= 1 })),
-        games: [
+    increaseNumber: (game) => set((state) => increase(game, state)),
+    decreaseNumber: (game) => set((state) => decrease(game, state)),
+    games: [
         {
             name: "A Hat in Time",
             image: "aHatInTime.jfif",
